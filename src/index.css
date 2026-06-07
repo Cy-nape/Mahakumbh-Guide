@@ -1,0 +1,227 @@
+/* Append this to index.css or replace entirely */
+:root {
+  --primary-saffron: #FF9933;
+  --secondary-saffron: #E67E22;
+  --deep-orange: #D35400;
+  --gold: #FFD700;
+  --maroon: #800000;
+  --bg-light: #FFF5E1; 
+  --bg-white: #FFFFFF;
+  --text-main: #333333;
+  --text-muted: #666666;
+  --text-light: #FFFFFF;
+  --accent-blue: #004080;
+  --success: #27AE60;
+  --danger: #C0392B;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--maroon);
+  margin-bottom: 1rem;
+}
+
+/* Glassmorphism */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.glass-header {
+  background: rgba(255, 153, 51, 0.9);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 215, 0, 0.4);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Layout Utilities */
+.container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1rem; }
+.flex { display: flex; }
+.flex-col { flex-direction: column; }
+.items-center { align-items: center; }
+.justify-between { justify-content: space-between; }
+.justify-center { justify-content: center; }
+.gap-2 { gap: 0.5rem; }
+.gap-4 { gap: 1rem; }
+.mt-4 { margin-top: 1rem; }
+.mt-8 { margin-top: 2rem; }
+.mb-4 { margin-bottom: 1rem; }
+.mb-8 { margin-bottom: 2rem; }
+.p-4 { padding: 1rem; }
+.p-8 { padding: 2rem; }
+.text-center { text-align: center; }
+.text-saffron { color: var(--primary-saffron); }
+.text-maroon { color: var(--maroon); }
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 0.75rem 1.5rem; border-radius: 8px; font-weight: 600;
+  border: none; cursor: pointer; transition: all 0.3s ease; font-size: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary-saffron) 0%, var(--deep-orange) 100%);
+  color: var(--text-light); box-shadow: 0 4px 15px rgba(211, 84, 0, 0.3);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px); box-shadow: 0 6px 20px rgba(211, 84, 0, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in { animation: fadeIn 0.5s ease-out forwards; }
+
+/* Grid Cards */
+.grid-cards {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem;
+}
+
+.service-card {
+  padding: 1.5rem; border-radius: 12px; background: var(--bg-white);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; display: flex; flex-direction: column; align-items: center;
+  text-align: center; border-top: 4px solid var(--primary-saffron);
+}
+.service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(255, 153, 51, 0.2); }
+.service-icon { font-size: 2.5rem; color: var(--deep-orange); margin-bottom: 1rem; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.7); backdrop-filter: blur(5px);
+  display: flex; align-items: center; justify-content: center; z-index: 1000; padding: 1rem;
+}
+
+.modal-content {
+  background: var(--bg-light); width: 100%; max-width: 900px; max-height: 90vh;
+  overflow-y: auto; border-radius: 16px; padding: 2.5rem; position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3); border-top: 6px solid var(--primary-saffron);
+}
+
+.modal-close {
+  position: absolute; top: 1rem; right: 1.5rem; background: transparent;
+  border: none; font-size: 2rem; cursor: pointer; color: var(--text-muted);
+}
+.modal-close:hover { color: var(--danger); }
+
+/* Language Splash Screen */
+.splash-screen {
+  position: fixed; inset: 0; background: linear-gradient(135deg, var(--bg-light) 0%, #ffe0b2 100%);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 2000;
+  padding: 2rem; overflow-y: auto;
+}
+
+.lang-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 1rem;
+  width: 100%; max-width: 800px; margin-top: 2rem;
+}
+
+.lang-box {
+  background: white; border: 2px solid var(--primary-saffron); border-radius: 8px;
+  padding: 1rem; text-align: center; cursor: pointer; transition: all 0.2s;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: 600; color: var(--maroon);
+}
+.lang-box:hover {
+  background: var(--primary-saffron); color: white; transform: scale(1.05);
+}
+
+/* Accordion for Events & FAQ */
+.accordion-item {
+  margin-bottom: 1rem; border: 1px solid rgba(0,0,0,0.1); border-radius: 8px; overflow: hidden;
+  background: white;
+}
+.accordion-header {
+  padding: 1rem; background: rgba(255, 153, 51, 0.1); cursor: pointer; display: flex;
+  justify-content: space-between; align-items: center; font-weight: bold; color: var(--maroon);
+}
+.accordion-content { padding: 1rem; background: white; color: var(--text-muted); border-top: 1px solid #eee; }
+
+/* Chat Assistant (from before) */
+.chat-widget { position: fixed; bottom: 2rem; right: 2rem; z-index: 999; }
+.chat-toggle {
+  width: 60px; height: 60px; border-radius: 50%; background: linear-gradient(135deg, var(--gold) 0%, var(--primary-saffron) 100%);
+  color: white; display: flex; align-items: center; justify-content: center; font-size: 1.8rem;
+  box-shadow: 0 4px 15px rgba(211, 84, 0, 0.4); cursor: pointer; border: none; transition: transform 0.3s;
+}
+.chat-toggle:hover { transform: scale(1.1); }
+.chat-window {
+  position: absolute; bottom: 80px; right: 0; width: 350px; height: 500px;
+  background: white; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  display: flex; flex-direction: column; overflow: hidden;
+}
+.chat-header { background: var(--primary-saffron); color: white; padding: 1rem; display: flex; justify-content: space-between; }
+.chat-messages { flex: 1; padding: 1rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1rem; background: #f9f9f9; }
+.chat-message { max-width: 80%; padding: 0.8rem 1rem; border-radius: 12px; font-size: 0.95rem; }
+.message-user { align-self: flex-end; background: var(--bg-light); border: 1px solid var(--primary-saffron); }
+.message-ai { align-self: flex-start; background: var(--primary-saffron); color: white; }
+.chat-input-area { padding: 1rem; display: flex; gap: 0.5rem; border-top: 1px solid #eee; }
+.chat-input-area input { flex: 1; padding: 0.8rem; border: 1px solid #ddd; border-radius: 8px; }
+.chat-input-area button { background: var(--primary-saffron); color: white; border: none; border-radius: 8px; padding: 0 1rem; }
+
+/* Hide Google Translate Top Bar and Tooltips */
+body { top: 0 !important; }
+.skiptranslate { display: none !important; }
+.goog-te-banner-frame.skiptranslate { display: none !important; }
+.goog-tooltip { display: none !important; }
+.goog-tooltip:hover { display: none !important; }
+.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+
+
+/* Avatar Animations */
+@keyframes floatAvatar {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulseGlow {
+  0% { box-shadow: 0 0 20px rgba(255, 153, 51, 0.4); }
+  50% { box-shadow: 0 0 50px rgba(255, 153, 51, 1), 0 0 100px rgba(255, 215, 0, 0.8); }
+  100% { box-shadow: 0 0 20px rgba(255, 153, 51, 0.4); }
+}
+
+.avatar-idle {
+  animation: floatAvatar 4s ease-in-out infinite;
+}
+
+.avatar-speaking {
+  animation: floatAvatar 3s ease-in-out infinite, pulseGlow 1.5s ease-in-out infinite;
+}
+
+.divine-overlay {
+  position: fixed;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
