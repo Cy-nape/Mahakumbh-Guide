@@ -9,16 +9,16 @@ By leveraging cutting-edge AI and Speech APIs, this project aims to create an in
 
 ---
 
-## ✨ Key Features
-- **🗣️ Multilingual Voice Assistant**: Features an advanced voice-activated assistant supporting 20 languages, utilizing the Web Speech API for real-time speech recognition and synthesis.
-- **💬 AI Chatbot**: Powered by Google's Gemini AI to provide highly accurate, contextual, and culturally aware responses to pilgrims' queries.
-- **🌍 20-Language Support**: Completely localized interface and interactions, breaking down language barriers for devotees from all over the world.
-- **⚡ Fast & Responsive**: Built with React and Vite for blazing fast performance across all devices (mobile-first approach).
-- **🎨 Divine Aesthetics**: A visually stunning UI featuring glassmorphism and modern design principles to reflect the grandeur of the Mahakumbh.
+## Key Features
+- ** Multilingual Voice Assistant**: Features an advanced voice-activated assistant supporting 20 languages, utilizing the Web Speech API for real-time speech recognition and synthesis.
+- ** AI Chatbot**: Powered by Google's Gemini AI to provide highly accurate, contextual, and culturally aware responses to pilgrims' queries.
+- ** 20-Language Support**: Completely localized interface and interactions, breaking down language barriers for devotees from all over the world.
+- ** Fast & Responsive**: Built with React and Vite for blazing fast performance across all devices (mobile-first approach).
+- ** Divine Aesthetics**: A visually stunning UI featuring glassmorphism and modern design principles to reflect the grandeur of the Mahakumbh.
 
 ---
 
-## 🛠️ Technology Stack
+## Technology Stack
 - **Frontend Framework**: React.js
 - **Build Tool**: Vite
 - **AI Integration**: Google Gemini API (`@google/generative-ai`)
@@ -27,7 +27,7 @@ By leveraging cutting-edge AI and Speech APIs, this project aims to create an in
 
 ---
 
-## 📸 Screenshots
+## Screenshots
 
 *(Replace the image below with an actual screenshot of the running app)*
 <div align="center">
@@ -36,7 +36,7 @@ By leveraging cutting-edge AI and Speech APIs, this project aims to create an in
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 To run this project locally on your machine, follow these steps:
 
@@ -66,8 +66,6 @@ The application will be running at `http://localhost:5173/`.
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions are always welcome! Feel free to open an issue or submit a pull request if you want to improve the Mahakumbh Assistant.
 
-## 📝 License
-This project is open-source and available under the [MIT License](LICENSE).
