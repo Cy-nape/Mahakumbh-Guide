@@ -31,7 +31,7 @@ By leveraging cutting-edge AI and Speech APIs, this project aims to create an in
 
 *(Replace the image below with an actual screenshot of the running app)*
 <div align="center">
-  <img src="./src/assets/hero.png" width="800" alt="App Screenshot Placeholder" />
+  <img src="./public/screenshot.png" width="800" alt="App Screenshot Placeholder" />
 </div>
 
 ---
@@ -68,4 +68,3 @@ The application will be running at `http://localhost:5173/`.
 
 ## Contributing
 Contributions are always welcome! Feel free to open an issue or submit a pull request if you want to improve the Mahakumbh Assistant.
-
